@@ -24,7 +24,7 @@ const connectDB = require('./src/config/db');
 connectDB();
 
 app.get('/', (req, res) => {
-  res.status(200).json({ Home: 'Welcome to St. John College membership API' });
+  res.status(200).json({ Home: 'Welcome to St. John College membership APIs' });
 });
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
