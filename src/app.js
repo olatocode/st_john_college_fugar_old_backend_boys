@@ -8,8 +8,8 @@ const morgan = require('morgan');
 const dotenv = require('dotenv');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsDoc = require('swagger-jsdoc');
-const swaggerOptions = require('./src/lib/swagger');
-const users = require('./src/routes/users');
+const swaggerOptions = require('./lib/swagger');
+const users = require('./routes/users');
 
 dotenv.config();
 app.use(cors());
@@ -18,7 +18,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const connectDB = require('./src/config/db');
+const connectDB = require('./config/db');
 
 // connect to db
 connectDB();
